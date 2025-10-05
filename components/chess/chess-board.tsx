@@ -99,7 +99,7 @@ export function ChessBoard({ board, currentTurn, playerColor, onMove, isGameOver
                 onClick={() => handleSquareClick(actualPos.row, actualPos.col)}
                 disabled={isGameOver}
                 className={cn(
-                  "w-16 h-16 md:w-20 md:h-20 max-sm:w-12 max-sm:h-12 flex items-center justify-center relative transition-colors",
+                  "md:w-20 md:h-20 max-md:w-16 max-md:h-16 max-sm:w-10 max-sm:h-10 flex items-center justify-center relative transition-colors",
                   isLight ? "bg-amber-300" : "bg-amber-700",
                   isSelected && "ring-4 ring-blue-500 ring-inset",
                   isValidMove && "after:absolute after:w-4 after:h-4 after:rounded-full after:bg-green-500/60",

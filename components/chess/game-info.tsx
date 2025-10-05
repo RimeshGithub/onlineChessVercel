@@ -25,14 +25,14 @@ export function GameInfo({ currentTurn, playerColor, isCheck, isCheckmate, isSta
         <div className="flex flex-col max-lg:flex-row max-lg:justify-center gap-4">
           <div className="flex items-center justify-between gap-1">
             <span className="text-sm font-medium">Your Color:</span>
-            <Badge variant={playerColor === "white" ? "default" : "secondary"}>
+            <Badge variant={playerColor === "white" ? "secondary" : "default"}>
               {playerColor.charAt(0).toUpperCase() + playerColor.slice(1)}
             </Badge>
           </div>
 
           <div className="flex items-center justify-between gap-1">
             <span className="text-sm font-medium">Current Turn:</span>
-            <Badge variant={isYourTurn ? "default" : "outline"}>
+            <Badge variant={isYourTurn ? "default" : "secondary"}>
               {currentTurn.charAt(0).toUpperCase() + currentTurn.slice(1)}
             </Badge>
           </div>
