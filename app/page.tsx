@@ -206,7 +206,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-500 via-slate-800 to-slate-900 p-4 md:p-8">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-white">Online Chess</h1>
+          <h1 className="text-5xl md:text-6xl max-md:mt-8 font-bold text-white">Online Chess</h1>
           <div className="flex items-center justify-center space-x-2 mt-10">
             <p className="text-xl text-slate-300">
               Playing as <span className="font-semibold text-white">{playerName}</span>
@@ -275,7 +275,7 @@ export default function HomePage() {
                 No games available. Create one to get started!
               </p>
             ) : (
-              <div className="space-y-3 mt-3">
+              <div className="space-y-3 mt-3 max-h-120 overflow-auto">
                 {filteredGames.map((game) => (
                   <div
                     key={game.id}

@@ -104,11 +104,11 @@ export function ChessBoard({ board, currentTurn, playerColor, onMove, isGameOver
                 onClick={() => handleSquareClick(actualPos.row, actualPos.col)}
                 disabled={isGameOver}
                 className={cn(
-                  "md:w-20 md:h-20 max-md:w-16 max-md:h-16 max-sm:w-10 max-sm:h-10 flex items-center justify-center relative transition-colors",
+                  "md:w-20 md:h-20 max-md:w-16 max-md:h-16 max-sm:w-9 max-sm:h-9 flex items-center justify-center relative transition-colors",
                   isLight ? "bg-amber-300" : "bg-amber-600",
-                  isSelected && "ring-4 md:ring-6 ring-green-500 ring-inset",
-                  isValidMove && !isEnemyPiece(actualPos.row, actualPos.col) && "after:absolute after:w-4 after:h-4 after:rounded-full after:bg-green-500/80",
-                  isValidMove && isEnemyPiece(actualPos.row, actualPos.col) && "ring-4 md:ring-6 ring-red-600 ring-inset",
+                  isSelected && "ring-2 sm:ring-4 md:ring-6 ring-green-500 ring-inset",
+                  isValidMove && !isEnemyPiece(actualPos.row, actualPos.col) && "after:absolute after:w-4 after:h-4 md:after:w-8 md:after:h-8 after:rounded-full after:bg-green-500/80",
+                  isValidMove && isEnemyPiece(actualPos.row, actualPos.col) && "ring-2 sm:ring-4 md:ring-6 ring-red-600 ring-inset",
                   !isGameOver && currentTurn === playerColor && "hover:brightness-95 cursor-pointer",
                   (isGameOver || currentTurn !== playerColor) && "cursor-not-allowed",
                 )}

@@ -32,7 +32,7 @@ export function GameInfo({ currentTurn, playerColor, isCheck, isCheckmate, isSta
 
           <div className="flex items-center justify-between gap-1">
             <span className="text-sm font-medium">Current Turn:</span>
-            <Badge variant={isYourTurn ? "default" : "secondary"}>
+            <Badge variant={isYourTurn ? "secondary" : "default"}>
               {currentTurn.charAt(0).toUpperCase() + currentTurn.slice(1)}
             </Badge>
           </div>
