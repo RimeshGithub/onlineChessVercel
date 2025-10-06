@@ -379,8 +379,8 @@ export default function ChessGamePage({ params }: { params: { gameId: string } }
   const gameOverMessage = getGameOverMessage()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4 max-lg:p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 max-lg:p-8">
+      <div className="flex items-center justify-center w-full lg:h-screen">
         <div className="flex flex-col lg:flex-row lg:gap-16 justify-center items-center gap-8">
           <div className="text-center space-y-2 flex items-center flex-col">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-5">Online Chess</h1>
