@@ -282,8 +282,8 @@ export default function HomePage() {
                     className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg"
                   >
                     <div className="flex flex-col gap-2">
-                      <p className="text-white font-medium">
-                        Game by {game.white_player_name}
+                      <p className="text-white">
+                        Game by <span className="font-bold">{game.white_player_name}</span>
                       </p>
                       <div className="flex items-center gap-2 text-white">
                         <Clock className="h-4 w-4" />

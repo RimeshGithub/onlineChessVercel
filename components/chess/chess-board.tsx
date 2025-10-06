@@ -69,6 +69,11 @@ export function ChessBoard({ board, currentTurn, playerColor, onMove, isGameOver
     return validMoves.some((move) => move.row === row && move.col === col)
   }
 
+  const isEnemyPiece = (row: number, col: number) => {
+    const piece = board[row][col]
+    return piece && piece.color !== playerColor
+  }
+
   const isLightSquare = (row: number, col: number) => {
     return (row + col) % 2 === 0
   }
@@ -100,9 +105,10 @@ export function ChessBoard({ board, currentTurn, playerColor, onMove, isGameOver
                 disabled={isGameOver}
                 className={cn(
                   "md:w-20 md:h-20 max-md:w-16 max-md:h-16 max-sm:w-10 max-sm:h-10 flex items-center justify-center relative transition-colors",
-                  isLight ? "bg-amber-300" : "bg-amber-700",
-                  isSelected && "ring-4 ring-blue-500 ring-inset",
-                  isValidMove && "after:absolute after:w-4 after:h-4 after:rounded-full after:bg-green-500/60",
+                  isLight ? "bg-amber-300" : "bg-amber-600",
+                  isSelected && "ring-4 md:ring-6 ring-green-500 ring-inset",
+                  isValidMove && !isEnemyPiece(actualPos.row, actualPos.col) && "after:absolute after:w-4 after:h-4 after:rounded-full after:bg-green-500/80",
+                  isValidMove && isEnemyPiece(actualPos.row, actualPos.col) && "ring-4 md:ring-6 ring-red-600 ring-inset",
                   !isGameOver && currentTurn === playerColor && "hover:brightness-95 cursor-pointer",
                   (isGameOver || currentTurn !== playerColor) && "cursor-not-allowed",
                 )}

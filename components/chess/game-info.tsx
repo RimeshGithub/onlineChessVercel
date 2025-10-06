@@ -40,7 +40,7 @@ export function GameInfo({ currentTurn, playerColor, isCheck, isCheckmate, isSta
 
         {isCheck && !isCheckmate && (
           <div className="p-3 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg">
-            <p className="text-sm font-semibold text-yellow-800 dark:text-yellow-200 text-center">Check!</p>
+            <p className="text-sm font-semibold text-red-800 dark:text-yellow-200 text-center">Check!</p>
           </div>
         )}
 
